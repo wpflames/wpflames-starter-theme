@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+  .buttons a {
+    margin-bottom: 40px;
+    display: block;
+  }
+  .boxes {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .boxes {
+    margin-top: -166px;
+  }
+  .cover .caption h2 {
+    font-size: 3rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 1280px) {
+  // Site Inner
+  /************************************/
+  .site-header,
+  .site-main {
+    .wrap {
+      margin: 0 auto;
+    }
+  }
+}

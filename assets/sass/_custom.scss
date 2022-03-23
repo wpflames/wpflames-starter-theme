@@ -1,0 +1,201 @@
+// Underscore Styles
+/************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Helvetica, Arial;
+}
+
+.site-main p {
+  line-height: 1.8;
+}
+
+.wrap {
+  @include wrap;
+}
+
+.home h1.entry-title {
+  display: none;
+}
+
+// Site Header
+/************************************/
+.site-header {
+  background: black;
+  color: white;
+  padding: 20px;
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    .site-branding {
+      min-width: 300px;
+      .site-title {
+        margin-bottom: 0;
+        a {
+          color: white;
+          font-weight: bold;
+          font-size: 2rem;
+          text-transform: uppercase;
+          text-decoration: none;
+          @include gradient-text;
+        }
+      }
+      .site-description {
+        margin-bottom: 0;
+      }
+    }
+    #site-navigation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      ul#primary-menu {
+        display: flex;
+        justify-content: flex-end;
+        li.menu-item {
+          margin: 0 20px;
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Site Inner
+/************************************/
+.site-main {
+  .wrap {
+    margin: 0 20px;
+  }
+}
+
+// Site Footer
+/************************************/
+.site-footer {
+  background: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  a {
+    color: white;
+  }
+}
+
+/* Sticky Footer 
+/************************************/
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 97vh;
+}
+.site-main {
+  flex: 1;
+  width: 100%;
+  padding: 20px 0;
+  word-wrap: break-word;
+}
+
+// Buttons
+/************************************/
+.buttons {
+  margin: 50px 0;
+  display: block;
+  a {
+    background: #fff;
+    border: 2px solid;
+    color: black;
+    font-size: 1.2rem;
+    margin: 0 20px;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: $ease;
+    &:hover {
+      background: transparent;
+      color: white;
+    }
+    &.outline {
+      background: transparent;
+      border: 2px solid;
+      color: white;
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+}
+
+// Cover
+/************************************/
+.cover {
+  min-height: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .caption {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+    h2 {
+      font-weight: normal;
+      font-size: 2.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+// Boxes
+/************************************/
+.boxes {
+  background: white;
+  position: relative;
+  z-index: 2;
+  box-shadow: $shadow;
+  padding: 30px;
+  .box {
+    background: black;
+    color: white;
+    padding: 50px;
+    h3 {
+      font-weight: normal;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    a {
+      color: white;
+    }
+    &#box1 {
+      background: $gradient-1;
+    }
+    &#box2 {
+      background: $gradient-2;
+    }
+    &#box3 {
+      background: $gradient-3;
+    }
+  }
+}

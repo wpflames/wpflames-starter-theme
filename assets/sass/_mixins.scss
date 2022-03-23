@@ -1,0 +1,11 @@
+@mixin gradient-text {
+  background-image: linear-gradient(to right, #005e7f, #61b6cd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin wrap {
+  margin: 0 auto;
+  max-width: 1280px;
+}
