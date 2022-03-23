@@ -1,15 +1,40 @@
-<?php defined( 'ABSPATH' ) || exit; 
+<?php
 
-get_header();
+// Front Page
+/************************************/
+defined( 'ABSPATH' ) || exit; 
 
-get_template_part( 'template-parts/home/content', 'cover' ); ?>
+get_header(); ?>
 
-<main id="primary" class="site-main">
-	<div class="wrap">
-		<?php while ( have_posts() ) : the_post();
-			get_template_part( 'template-parts/home/content', 'sections' );
-		endwhile; ?>
-	</div>
+<main class="site-main">
+
+	<section id="section-1" class="container-fluid">
+		<?php get_template_part( 'template-parts/content', 'cover' ); ?>
+	</section>
+
+	<section id="section-2" class="container">
+		
+	</section>
+
+	<section id="section-3" class="container">
+		
+	</section>
+
+	<section id="section-4" class="container-fluid">
+		
+	</section> 
+
+	<section id="section-5" class="container">
+		
+	</section>
+
+	<section id="section-6" class="container">
+		
+	</section>
+
+	<section id="section-7" class="container">
+		
+	</section>
 </main>
 
-<?php get_footer();
+<?php get_footer(); ?>
