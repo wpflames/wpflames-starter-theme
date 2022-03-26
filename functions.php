@@ -5,13 +5,13 @@ defined( 'ABSPATH' ) || exit;
 // =============================================================
 // Require Functions
 // =============================================================
-require_once('inc/underscore-functions.php');
-require_once('inc/post-types.php');
-require_once('inc/remove-junk.php');
-require_once('inc/async.php');
-require_once('inc/wpml.php');
-require_once('inc/login-logo.php');
-require_once('inc/disable-comments.php');
+require get_theme_file_path('inc/underscore-functions.php');
+require get_theme_file_path('inc/post-types.php');
+require get_theme_file_path('inc/remove-junk.php');
+require get_theme_file_path('inc/async.php');
+require get_theme_file_path('inc/wpml.php');
+require get_theme_file_path('inc/login-logo.php');
+require get_theme_file_path('inc/disable-comments.php');
 
 // =============================================================
 // Define constants
@@ -22,7 +22,8 @@ define('THEME', get_stylesheet_directory_uri());
 // Theme URL
 // =============================================================
 function theme_url(){
-    echo site_url('/wp-content/themes/YOURTHEME/');
+    // echo site_url('/wp-content/themes/YOURTHEME/');
+    echo get_stylesheet_directory_uri();
 }
 
 // =============================================================
