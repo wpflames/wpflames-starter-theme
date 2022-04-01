@@ -199,3 +199,30 @@
     }
   }
 }
+
+// Ninja Forms
+/************************************/
+.nf-form-fields-required {
+  display: none;
+}
+.nf-form-title {
+  margin-bottom: 30px;
+  display: block;
+  h3 {
+    font-size: 2rem;
+  }
+}
+.nf-error-msg,
+.ninja-forms-req-symbol {
+  color: black !important;
+  display: none;
+}
+.nf-field label {
+  font-weight: 400 !important;
+  a {
+    color: black !important;
+  }
+}
+.nf-form-content input[type="button"] {
+  background: orange !important;
+}

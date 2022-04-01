@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: $sm) {
   .buttons a {
     margin-bottom: 40px;
     display: block;
@@ -8,7 +8,7 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: $lg) {
   .boxes {
     margin-top: -166px;
   }
@@ -18,7 +18,7 @@
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: $xl) {
   // Site Inner
   /************************************/
   .site-header,

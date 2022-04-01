@@ -1,0 +1,31 @@
+.site-inner {
+  margin: 0 auto;
+  padding: 60px 30px 0;
+}
+.content-sidebar-wrap {
+  max-width: 1200px;
+  margin: 0 auto 120px;
+  position: relative;
+  z-index: 98;
+}
+.content {
+  position: relative;
+  max-width: 780px;
+}
+@media only screen and (min-width: 960px) {
+  .site-inner {
+    max-width: 1140px;
+  }
+  .content-sidebar-wrap {
+    display: flex;
+  }
+  #primary.content {
+    width: 65%;
+    margin-right: 5%;
+    clear: both;
+  }
+
+  #secondary.sidebar {
+    width: 30%;
+  }
+}
