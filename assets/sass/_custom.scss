@@ -226,3 +226,27 @@
 .nf-form-content input[type="button"] {
   background: orange !important;
 }
+
+// Archive
+/************************************/
+.archive {
+  main {
+    article {
+      h2 {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+// Breadcrumbs
+/************************************/
+#breadcrumbs {
+  margin: 20px auto;
+  a {
+    color: black;
+  }
+}

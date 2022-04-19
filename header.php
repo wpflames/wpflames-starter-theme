@@ -69,3 +69,11 @@ defined( 'ABSPATH' ) || exit;
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
+
+<div id="breadcrumbs" class="wrap">
+		<?php
+			if ( !is_front_page() && function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb( '<p>','</p>' );
+		}
+		?>
+</div>

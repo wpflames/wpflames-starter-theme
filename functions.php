@@ -83,3 +83,48 @@ function wpflames_hide_notices_wp() {
     echo '<style> .notice { display: none;} </style>';
 }
 add_action('admin_head', 'wpflames_hide_notices_wp'); 
+
+// =========================================================================
+// Button Shortcode 
+// =========================================================================
+function btn_shortcode( $atts, $content = null ) {
+    $a = shortcode_atts( array(
+        'class'  =>  '',
+        'href'  =>  '#',
+        'text' => ''
+    ), $atts );
+ 
+    return '<a class="btn-cta ' . esc_attr($a['class']) . '" href="' . esc_attr($a['href']) . '">' . esc_attr($a['text']) . '</a>';
+}
+add_shortcode( 'button', 'btn_shortcode' );
+
+
+// =========================================================================
+// Button Back 
+// =========================================================================
+function btn_back_home() {
+    ob_start();
+    echo '<a class="btn-cta back" href="'.site_url().'">
+            <span>
+                <svg id="arrow-left" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"/></svg>
+            </span> Vissza a főoldalra
+        </a>';
+    return ob_get_clean();
+}
+add_shortcode('backhome', 'btn_back_home');
+
+// =========================================================================
+// Change the excerpt more filter
+// =========================================================================
+function custom_excerpt_more( $more ) {
+    return '... <div class="more-link-wrap"> <a class="btn-cta read-more" href="'. get_permalink( get_the_ID() ) . '"><span class="text">Tovább</span> <span class="icon"><svg id="arrow-right-long" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504.3 273.6l-112.1 104c-6.992 6.484-17.18 8.218-25.94 4.406c-8.758-3.812-14.42-12.45-14.42-21.1L351.9 288H32C14.33 288 .0002 273.7 .0002 255.1S14.33 224 32 224h319.9l0-72c0-9.547 5.66-18.19 14.42-22c8.754-3.809 18.95-2.075 25.94 4.41l112.1 104C514.6 247.9 514.6 264.1 504.3 273.6z"/></svg></span></a></div>';
+     }
+ add_filter('excerpt_more', 'custom_excerpt_more');
+
+ // =========================================================================
+// Excerpt length
+// =========================================================================
+function modify_excerpt_length( $length ) {
+    return 18; 
+}
+add_filter( 'excerpt_length', 'modify_excerpt_length' );

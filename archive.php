@@ -1,54 +1,57 @@
 <?php
 /**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Underscore
+ * Archive template with numbered pagination
  */
 
-// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit; 
 
-get_header();
-?>
+get_header(); ?>
 
-	<main id="primary" class="site-main">
+<div class="site-inner">
 
-		<?php if ( have_posts() ) : ?>
+    <div class="content-sidebar-wrap">
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+        <main id="primary" class="content">
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+        <?php 
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-			endwhile;
+		$args = array(
+            'post_type' => 'post',
+			'posts_per_page' => 10,
+  			'paged'          => $paged
+		);
 
-			the_posts_navigation();
+		$the_query = new WP_Query( $args ); 
 
-		else :
+        if ($the_query-> have_posts() ) : ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+                <header class="page-header">
+                    <h1 class="page-title">Archive</h1>
+                </header>
 
-		endif;
-		?>
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post();
 
-	</main><!-- #main -->
+					get_template_part( 'template-parts/content', get_post_type() );
 
-<?php
-get_sidebar();
-get_footer();
+                endwhile;
+
+                the_posts_pagination( array(
+                    'mid_size'  => 2,
+                ) );
+
+            else :
+
+                get_template_part( 'template-parts/content', 'none' );
+
+            endif;
+            ?>
+
+        </main><!-- #main -->
+        <?php get_sidebar(); ?>
+    </div>
+	
+</div>
+
+<?php get_footer(); ?>
