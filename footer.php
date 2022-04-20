@@ -17,21 +17,11 @@ defined( 'ABSPATH' ) || exit; ?>
 						<h4>Popular posts</h4>
 						<ul>
 							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
 						</ul>
 					</div>
 					<div class="grid-item">
 						<h4>Other informations</h4>
 						<ul>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
 							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
 						</ul>
 					</div>
