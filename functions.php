@@ -68,7 +68,9 @@ add_filter( 'body_class', 'add_slug_to_body_class' );
 function add_featured_image(){
 	if ( has_post_thumbnail() ) {
 		the_post_thumbnail( 'full', array('class' => 'featured') );
-	}
+	} else{
+        echo '<img src="'.get_stylesheet_directory_uri().'/images/placeholder.jpg" alt="placeholder">';
+    }
 }
 
 // =============================================================
