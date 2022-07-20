@@ -34,20 +34,27 @@ defined( 'ABSPATH' ) || exit;
 				<?php if ( is_front_page() && is_home() ) : ?>
 					<h1 class="site-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php theme_url(); ?>/images/logo.svg" alt="logo">
+							<div class="site-logo-wrapper">
+								<img class="site-logo" src="<?php theme_url(); ?>/images/logo.svg" alt="logo">
+								<span class="site-logo-circle"></span>
+								<span class="site-logo-bg"></span>
+							</div>
 						</a>
 					</h1>
 				<?php else : ?>
 					<p class="site-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php theme_url(); ?>/images/logo.svg" alt="logo">
+							<div class="site-logo-wrapper">
+								<img class="site-logo" src="<?php theme_url(); ?>/images/logo.svg" alt="logo">
+								<span class="site-logo-circle"></span>
+								<span class="site-logo-bg"></span>
+							</div>
 						</a>
 					</p>
 				<?php endif;
 				
 				$underscore_description = get_bloginfo( 'description', 'display' );
 				if ( $underscore_description || is_customize_preview() ) : ?>
-					<p class="site-description"><?php echo $underscore_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 

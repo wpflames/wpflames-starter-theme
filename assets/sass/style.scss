@@ -1,12 +1,10 @@
 @import "breakpoints";
 @import "grid";
+@import "mixins";
 @import "layout";
 @import "typo";
 @import "variables";
-@import "mixins";
-@import "hamburger";
 @import "custom";
-@import "responsive";
 @import "tablet";
 @import "hide";
-@import "header";
+@import "header/header";

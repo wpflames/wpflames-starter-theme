@@ -11,57 +11,8 @@
   line-height: 1.8;
 }
 
-.wrap {
-  @include wrap;
-}
-
 .home h1.entry-title {
   display: none;
-}
-
-// Site Header
-/************************************/
-.site-header {
-  background: black;
-  color: white;
-  padding: 20px;
-  .wrap {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    .site-branding {
-      min-width: 300px;
-      .site-title {
-        margin-bottom: 0;
-        a {
-          color: white;
-          font-weight: bold;
-          font-size: 2rem;
-          text-transform: uppercase;
-          text-decoration: none;
-          @include gradient-text;
-        }
-      }
-      .site-description {
-        margin-bottom: 0;
-      }
-    }
-    #site-navigation {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      ul#primary-menu {
-        display: flex;
-        justify-content: flex-end;
-        li.menu-item {
-          margin: 0 20px;
-          a {
-            color: white;
-          }
-        }
-      }
-    }
-  }
 }
 
 // Site Inner
