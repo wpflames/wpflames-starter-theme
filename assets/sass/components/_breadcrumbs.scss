@@ -1,15 +1,18 @@
 // Breadcrumbs
 /************************************/
 .home .breadcrumbs {
-    display: none;
+  display: none;
 }
 .breadcrumbs {
-    margin-left: 0;
-    &-wrap{
-      margin: 20px;
-    }
-  
-    a {
-      color: black;
-    }
+  font-weight: 300;
+  margin-left: 0;
+  max-width: 1400px;
+  margin: auto;
+  &-wrap{
+    margin: 20px;
+  }
+
+  a {
+    color: black;
+  }
 }

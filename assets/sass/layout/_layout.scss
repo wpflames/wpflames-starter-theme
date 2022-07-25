@@ -12,15 +12,10 @@
     clear: both;
   }
   .sidebar {
-    width: 30%;
+    width: 35%;
   }
 }
 
 .container{
   margin-bottom: 50px;
-}
-main.frontpage {
-  @media (min-width: $md){
-    // margin-top: -53px;
-  }
 }

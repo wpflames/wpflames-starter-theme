@@ -3,24 +3,11 @@
 .cover{
   background: $blue-cover;
   display: block;
-  margin-top: -50px;
-  @media (min-width: 576px){
-    margin-top: -58px;
-  }
-  @media (min-width: 768px){
-    margin-top: -60px;
-  }
-  @media (min-width: 1000px){
-    margin-top: -66px;
-  }
-  @media (min-width: 1280px){
-    margin-top: -72px;
-  }
   &-container{
     max-width: 1400px;
     margin: auto;
   }
-  &-background{
+  &-dog{
     @media (min-width: $lg){
         background: url(../../images/cover.jpg);
         background-repeat: no-repeat;

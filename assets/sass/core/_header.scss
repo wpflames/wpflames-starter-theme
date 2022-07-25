@@ -5,11 +5,12 @@
 .site-header {
   background: $grey-100;
   color: black;
-  padding: 0 20px 20px 0;
+  padding: 0 20px 0 0;
   &-wrap {
     display: flex;
     justify-content: space-between;
     margin: auto;
+    max-width: 1400px;
   }
   &-branding {
     min-width: 300px;
@@ -36,7 +37,7 @@
     &-svg{
       position: absolute;
       top: 0;
-      left: -220px;
+      left: -254px;
       z-index: 3;
       width: 520px;
     }
