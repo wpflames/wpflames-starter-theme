@@ -1,13 +1,4 @@
 <?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Underscore
- */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit; 
@@ -28,35 +19,25 @@ defined( 'ABSPATH' ) || exit;
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'underscore' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="wrap">
-			<div class="site-branding">
-				<?php if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title">
+	<header class="site-header">
+		<div class="site-header-wrap">
+			<div class="site-header-branding">
+					<div class="site-header-branding-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<div class="site-logo-wrapper">
-								<img class="site-logo" src="<?php theme_url(); ?>/images/logo.svg" alt="logo">
-								<span class="site-logo-circle"></span>
-								<span class="site-logo-bg"></span>
+							<div class="site-header-logo">
+								<img class="site-header-logo-img" src="<?php theme_url(); ?>/images/logo.svg" alt="logo">
+									<svg class="site-header-logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										viewBox="0 0 500 80" style="enable-background:new 0 0 500 80;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#FFFFFF;}
+									</style>
+									<path class="st0" d="M458.1,0H0v80h458.1v-0.4c23.1,0,41.9-17.8,41.9-39.8C500,17.8,481.2,0,458.1,0z"/>
+									</svg>
 							</div>
 						</a>
-					</h1>
-				<?php else : ?>
-					<p class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<div class="site-logo-wrapper">
-								<img class="site-logo" src="<?php theme_url(); ?>/images/logo.svg" alt="logo">
-								<span class="site-logo-circle"></span>
-								<span class="site-logo-bg"></span>
-							</div>
-						</a>
-					</p>
-				<?php endif;
+					</div>
 				
-				$underscore_description = get_bloginfo( 'description', 'display' );
-				if ( $underscore_description || is_customize_preview() ) : ?>
-				<?php endif; ?>
-			</div><!-- .site-branding -->
+			</div>
 
 			<nav id="site-navigation" class="main-navigation">
 				<div id="toggle" onclick="toggle()" aria-controls="primary-menu" aria-expanded="false">
@@ -73,14 +54,18 @@ defined( 'ABSPATH' ) || exit;
 				);
 				?>
 				
-			</nav><!-- #site-navigation -->
+			</nav>
 		</div>
-	</header><!-- #masthead -->
+	</header>
 
-<div id="breadcrumbs" class="wrap">
-		<?php
-			if ( !is_front_page() && function_exists('yoast_breadcrumb') ) {
-			yoast_breadcrumb( '<p>','</p>' );
-		}
-		?>
-</div>
+<?php if ( !is_front_page()): ?>
+	<div class="breadcrumbs">
+		<div class="breadcrumbs-wrap">
+			<?php
+				if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb( '<p>','</p>' );
+			}
+			?>
+		</div>
+	</div>
+<?php endif; ?>

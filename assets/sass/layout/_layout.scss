@@ -1,0 +1,26 @@
+.wrap {
+  @include wrap;
+}
+.content {
+  position: relative;
+  max-width: 780px;
+}
+@media (min-width: 960px) {
+  .content {
+    width: 65%;
+    margin-right: 5%;
+    clear: both;
+  }
+  .sidebar {
+    width: 30%;
+  }
+}
+
+.container{
+  margin-bottom: 50px;
+}
+main.frontpage {
+  @media (min-width: $md){
+    // margin-top: -53px;
+  }
+}

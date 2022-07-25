@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div class="content-sidebar-wrap">
 
-	<main id="primary" class="content">
+	<main class="content">
 
 			<?php while ( have_posts() ) : the_post();
 

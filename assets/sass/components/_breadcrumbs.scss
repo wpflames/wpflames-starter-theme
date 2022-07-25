@@ -1,0 +1,15 @@
+// Breadcrumbs
+/************************************/
+.home .breadcrumbs {
+    display: none;
+}
+.breadcrumbs {
+    margin-left: 0;
+    &-wrap{
+      margin: 20px;
+    }
+  
+    a {
+      color: black;
+    }
+}

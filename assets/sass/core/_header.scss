@@ -1,0 +1,110 @@
+@import "hamburger";
+
+// Site Header
+/************************************/
+.site-header {
+  background: $grey-100;
+  color: black;
+  padding: 0 20px 20px 0;
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  &-branding {
+    min-width: 300px;
+    &-title {
+      margin: 0;
+      
+    }
+    .site-description {
+      margin-bottom: 0;
+    }
+  }
+  &-logo{
+    position: relative;
+    overflow-y: hidden;
+    @media (min-width: $lg){
+      overflow-y: visible;
+    }
+    &-img {
+      width: 260px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 9;
+    }
+    &-svg{
+      position: absolute;
+      top: 0;
+      left: -220px;
+      z-index: 3;
+      width: 520px;
+    }
+  }
+  
+  #site-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    ul#menu {
+      display: flex;
+      li.menu-item {
+        @media (min-width: $md){
+          margin: 0;
+        }
+        a {
+          color: black;
+          padding: 20px 15px;
+          position: relative;
+          transition: all 0.5s;
+          &:after {
+            transition: all 0.5s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: ".";
+            color: transparent;
+            background: $blue-dark;
+            height: 2px;
+          }
+          &:hover {
+            color: $blue-dark;
+          }
+          &:hover:after {
+            width: 100%;
+          }
+        }
+        ul.sub-menu {
+          li {
+            margin: 0 10px;
+          }
+        }
+        &.current-menu-item {
+          a {
+            color: $blue-dark;
+          }
+          ul.sub-menu {
+            a {
+              color: black;
+            }
+          }
+        }
+      }
+      ul.sub-menu {
+        background: $grey-100;
+        display: block;
+        li {
+          position: relative;
+          a {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 0;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}

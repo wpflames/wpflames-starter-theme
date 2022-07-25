@@ -1,10 +1,27 @@
-@import "breakpoints";
-@import "grid";
-@import "mixins";
-@import "layout";
-@import "typo";
-@import "variables";
-@import "custom";
-@import "tablet";
-@import "hide";
-@import "header/header";
+// Utils
+@import "utils/breakpoints";
+@import "utils/grid";
+@import "utils/mixins";
+@import "utils/variables";
+@import "utils/typo";
+
+// Core
+@import "core/header";
+@import "core/footer";
+@import "core/archive";
+
+// Layout
+@import "layout/layout";
+@import "layout/site-inner";
+@import "layout/content-sidebar-wrap";
+@import "layout/sidebar";
+
+// Internal Components
+@import "components/cover";
+@import "components/breadcrumbs";
+@import "components/boxes";
+@import "components/ninjaforms";
+
+
+// External Components
+@import "../../components/cta/cta";

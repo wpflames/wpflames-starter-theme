@@ -1,0 +1,13 @@
+.content-sidebar-wrap {
+	border: 1px solid $grey-100;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 120px;
+    position: relative;
+    h1.entry-title{
+        margin-top: 0;
+    }
+    @media (min-width: $md) {
+        display: flex;
+    }
+}
