@@ -1,14 +1,22 @@
 // Archive
 /************************************/
-.archive {
-    main {
-      article {
-        h2 {
-          a {
-            text-decoration: none;
-            color: black;
-          }
-        }
-      }
-    }
+.archive-card {
+  border-bottom: 1px solid $grey-100;
+  @media (min-width: $sm) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-bottom: 30px;
   }
+  &-img{
+    box-shadow: $shadow;
+  }
+  &-text{
+    margin-top: -15px;
+  }
+  a.archive-card-link{
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+  }
+}
