@@ -3,7 +3,7 @@
 defined( 'ABSPATH' ) || exit; 
 
 // =============================================================
-// Require Functions
+// Back-End Functions
 // =============================================================
 require get_theme_file_path('inc/underscore-functions.php');
 require get_theme_file_path('inc/post-types.php');
@@ -12,6 +12,12 @@ require get_theme_file_path('inc/async.php');
 require get_theme_file_path('inc/wpml.php');
 require get_theme_file_path('inc/login-logo.php');
 require get_theme_file_path('inc/disable-comments.php');
+
+// =============================================================
+// Front-End Functions
+// =============================================================
+function card(){ require get_theme_file_path('components/card/card.php'); }
+function box(){ require get_theme_file_path('components/box/box.php'); }
 
 // =============================================================
 // Define constants
@@ -72,6 +78,17 @@ add_image_size( 'archive', 300, 300, array( 'left', 'top' ) ); // Hard crop left
 function add_featured_image(){
 	if ( has_post_thumbnail() ) {
 		the_post_thumbnail( 'medium', array('class' => 'archive-card-img') );
+	} else{
+        echo '<img src="'.get_stylesheet_directory_uri().'/images/placeholder.jpg" alt="placeholder">';
+    }
+}
+
+// =============================================================
+// Featured Image
+// =============================================================
+function featured_image(){
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail( 'full', array('class' => 'archive-card-img') );
 	} else{
         echo '<img src="'.get_stylesheet_directory_uri().'/images/placeholder.jpg" alt="placeholder">';
     }
