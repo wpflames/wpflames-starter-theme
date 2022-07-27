@@ -21,9 +21,9 @@
 @import "components/cover";
 @import "components/breadcrumbs";
 @import "components/ninjaforms";
-@import "components/boxes";
-@import "components/cards";
 
 
 // External Components
+@import "../../components/box/box";
+@import "../../components/card/card";
 @import "../../components/cta/cta";

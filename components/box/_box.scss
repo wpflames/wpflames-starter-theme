@@ -1,33 +1,36 @@
+@use "../../assets/sass/utils/variables" as *;
+
 // Boxes
 /************************************/
 .boxes {
     background: white;
     position: relative;
-    z-index: 2;
+    z-index: 2; 
     padding: 20px;
-    .box {
-      background: black;
-      color: white;
-      padding: 50px;
-      h3 {
+}
+.box {
+    background: black;
+    color: white;
+    padding: 50px;
+    &-title {
         font-weight: normal;
         font-size: 2rem;
         margin-bottom: 20px;
-      }
-      p {
-        font-size: 1.2rem;
-      }
-      a {
-        color: white;
-      }
-      &#box1 {
-        background: $gradient-1;
-      }
-      &#box2 {
-        background: $gradient-2;
-      }
-      &#box3 {
-        background: $gradient-3;
-      }
     }
-  }
+    p.box-text {
+        font-size: 1.2rem !important;
+    }
+    &-link {
+        color: white;
+    }
+    &:nth-child(1) {
+        background: $gradient-1;
+    }
+    &:nth-child(2) {
+        background: $gradient-2;
+    }
+    &:nth-child(3) {
+        background: $gradient-3;
+    }
+}
+  

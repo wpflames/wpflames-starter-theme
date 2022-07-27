@@ -158,3 +158,12 @@ function modify_excerpt_length( $length ) {
     return 18; 
 }
 add_filter( 'excerpt_length', 'modify_excerpt_length' );
+
+// =========================================================================
+// ADD CLASS TO EXCERPT
+// =========================================================================
+function add_class_to_excerpt ($post_excerpt) { 
+    $post_excerpt = '<p class="box-text">' . $post_excerpt . '</p>';
+    return $post_excerpt;
+}  
+add_filter ('get_the_excerpt','add_class_to_excerpt');

@@ -1,6 +1,6 @@
 <?php defined( 'ABSPATH' ) || exit; ?>
 <section class="cover">
-    <div class="cover-background">
+    <div class="cover-dog">
             <div class="cover-container">
                 <div class="cover-caption">
                     <h2><span class="line-1">Barátságos</span> 

@@ -1,4 +1,5 @@
 <?php 
+// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit; ?>
 
 <div class="wrap">
@@ -11,20 +12,12 @@ defined( 'ABSPATH' ) || exit; ?>
         
         $the_query = new WP_Query( $args ); 
 
-        $i = 0;
-        
-            if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
+        if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
 
-                $i++; ?>
+            box(); 
 
-                <div id="box<?php echo $i; ?>" class="box"> 
-                    <h3><?php the_title(); ?></h3> 
-                    <p><?php the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>">Tovább</a>
-                </div>
-
-           <?php endwhile; endif; 
-        
+        endwhile; endif; 
+    
     wp_reset_postdata(); ?>
 
         

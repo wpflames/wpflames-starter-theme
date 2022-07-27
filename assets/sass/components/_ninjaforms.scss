@@ -1,31 +1,31 @@
 // Ninja Forms
 /************************************/
 .nf-form-fields-required {
-  display: none;
-}
-.nf-form-title {
-  margin-bottom: 30px;
-  display: none;
-  h3 {
-    font-size: 2rem;
+    display: none;
   }
-}
-.nf-error-msg,
-.ninja-forms-req-symbol {
-  color: black !important;
-  display: none;
-}
-.nf-field label {
-  font-weight: 400 !important;
-  a {
+  .nf-form-title {
+    margin-bottom: 30px;
+    display: none;
+    h3 {
+      font-size: 2rem;
+    }
+  }
+  .nf-error-msg,
+  .ninja-forms-req-symbol {
     color: black !important;
+    display: none;
   }
-}
-.nf-form-content input[type="button"] {
-  background: $gradient-1 !important;
-  font-size: 1.4rem;
-  height: auto;
-  font-weight: bold;
-  padding: 15px 20px;
-  font-weight: 600;
-}
+  .nf-field label {
+    font-weight: 400 !important;
+    a {
+      color: black !important;
+    }
+  }
+  .nf-form-content input[type="button"] {
+    background: $gradient-1 !important;
+    font-size: 1.4rem;
+    height: auto;
+    font-weight: bold;
+    padding: 15px 20px;
+    font-weight: 600;
+  }
