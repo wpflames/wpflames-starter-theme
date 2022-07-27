@@ -1,9 +1,5 @@
-<?php
+<?php defined( 'ABSPATH' ) || exit; ?>
 
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit; 
-
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -58,14 +54,4 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 	</header>
 
-<?php if ( !is_front_page()): ?>
-	<div class="breadcrumbs">
-		<div class="breadcrumbs-wrap">
-			<?php
-				if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb( '<p>','</p>' );
-			}
-			?>
-		</div>
-	</div>
-<?php endif; ?>
+<?php breadcrumbs(); ?>

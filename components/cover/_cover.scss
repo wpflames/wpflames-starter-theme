@@ -1,0 +1,68 @@
+// Cover
+/************************************/
+.cover{
+  background: $blue-cover;
+  display: block;
+  &-container{
+    max-width: 1400px;
+    margin: auto;
+  }
+  &-dog{
+    @media (min-width: $lg){
+        background: url(../../images/cover.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    min-height: 330px;
+    position: relative;
+    margin-bottom: 50px;
+    @media (min-width: $xs) {
+      min-height: 400px;
+    }
+    @media (min-width: $sm) {
+      min-height: 550px;
+    }
+    @media (min-width: $lg) {
+      min-height: 600px;
+    }
+  }
+  &-caption {
+    margin-left: 20px;
+    top: 20px;
+    @media (min-width: $sm) {
+      margin: 0 20px;
+      top: 60px;
+    }
+    @media (min-width: $lg) {
+      top: 80px;
+    }
+    @media (min-width: $xl) {
+      top: 100px;
+    }
+    margin-right: auto;
+    max-width: 800px;
+    position: relative;
+    z-index: 0;
+    h2 {
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      color: black;
+      span {
+        display: block;
+        &.line-2 {
+          margin-left: 50px;
+        }
+        &.line-4 {
+          font-weight: 300;
+          margin-top: 10px;
+        }
+      }
+    }
+    p {
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+}

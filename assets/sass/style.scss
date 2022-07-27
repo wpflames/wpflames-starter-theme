@@ -18,12 +18,11 @@
 @import "layout/content-sidebar-wrap";
 
 // Internal Components
-@import "components/cover";
-@import "components/breadcrumbs";
 @import "components/ninjaforms";
 
-
 // External Components
+@import "../../components/cover/cover";
+@import "../../components/breadcrumbs/breadcrumbs";
 @import "../../components/box/box";
 @import "../../components/card/card";
 @import "../../components/cta/cta";

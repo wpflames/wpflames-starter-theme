@@ -16,6 +16,8 @@ require get_theme_file_path('inc/disable-comments.php');
 // =============================================================
 // Front-End Functions
 // =============================================================
+function cover(){ require get_theme_file_path('components/cover/cover.php'); }
+function breadcrumbs(){ require get_theme_file_path('components/breadcrumbs/breadcrumbs.php'); }
 function card(){ require get_theme_file_path('components/card/card.php'); }
 function box(){ require get_theme_file_path('components/box/box.php'); }
 
